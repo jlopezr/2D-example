@@ -16,7 +16,9 @@ public class Movement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
-        starBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
+    {
+        var v = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        Debug.DrawLine(starBody.position, starBody.position + v, Color.red);
+        starBody.velocity = v * speed;
     }
 }

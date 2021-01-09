@@ -5,6 +5,12 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     public GameObject fireball;
+    private AudioSource source;
+
+    private void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     void Update()
     {        
@@ -16,6 +22,8 @@ public class Shooter : MonoBehaviour
                 new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0),
                 new Quaternion(0, 0, 0, 0)
             );
+
+            source.Play();
         }
     }
 

@@ -11,6 +11,8 @@ public class Target : MonoBehaviour
         if (col.gameObject.tag == "Bullet")
         {
             Debug.Log("Target was Hit!");
+            Destroy(col.gameObject);
+            Destroy(gameObject);
         }
     }
 

@@ -11,7 +11,7 @@ public class Fireball : MonoBehaviour
     void Start()
     {
         fireballBody = GetComponent<Rigidbody2D>();
-        fireballBody.velocity = new Vector2(speed, 0);
+        fireballBody.AddForce(new Vector2(speed, 0), ForceMode2D.Impulse);
     }
 
     // Update is called once per frame

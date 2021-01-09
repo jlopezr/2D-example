@@ -19,7 +19,8 @@ public class Target : MonoBehaviour
             Debug.Log("Target was Hit!");
             source.Play();
             Destroy(col.gameObject);
-            Destroy(gameObject);
+            GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, 1); //1 second to play the sound
             Score.AddScore();
         }
     }

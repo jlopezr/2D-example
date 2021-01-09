@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
-    private float fireballXValue;
-    public float fireballSpeed;
+    private Rigidbody2D fireballBody;
+    public float speed;
+    
 
     void Start()
     {
-        // getting the initial position where prefab is created
-        fireballXValue = gameObject.transform.position.x;
+        fireballBody = GetComponent<Rigidbody2D>();
+        fireballBody.velocity = new Vector2(speed, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // adding speed value to the X axis position
-        // value
-        fireballXValue += fireballSpeed;
-        // setting new X value to position
-        gameObject.transform.position = new Vector2(fireballXValue, gameObject.transform.position.y);
+        
     }
 
     private void OnBecameInvisible()

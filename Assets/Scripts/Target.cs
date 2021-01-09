@@ -13,6 +13,7 @@ public class Target : MonoBehaviour
             Debug.Log("Target was Hit!");
             Destroy(col.gameObject);
             Destroy(gameObject);
+            Score.AddScore();
         }
     }
 

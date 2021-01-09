@@ -22,4 +22,9 @@ public class Fireball : MonoBehaviour
         // setting new X value to position
         gameObject.transform.position = new Vector2(fireballXValue, gameObject.transform.position.y);
     }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }

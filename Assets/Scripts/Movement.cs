@@ -10,9 +10,7 @@ public class Movement : MonoBehaviour
     private bool sombrero = false;
 
     public Texture2D bottom;
-    public Texture2D top;
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +29,9 @@ public class Movement : MonoBehaviour
             if (!sombrero)
             {
                 sombrero = true;
-
+                
+                var top = Resources.Load<Texture2D>("sombrero");
+                
                 Texture2D combined = bottom.AlphaBlend(top);
 
                 Sprite sprite = Sprite.Create(
@@ -39,6 +39,8 @@ public class Movement : MonoBehaviour
                     new Rect(0, 0, combined.width, combined.height),
                     new Vector2(0.5f, 0.5f)
                 );
+
+                
 
                 gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
 

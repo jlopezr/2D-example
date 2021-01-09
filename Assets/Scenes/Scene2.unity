@@ -694,6 +694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starBody: {fileID: 1649545006}
   speed: 5
+  bottom: {fileID: 2800000, guid: 9e851010f4f70466a807745a9b5fb721, type: 3}
+  top: {fileID: 2800000, guid: f363dec6e43cd443396638d3efce2c32, type: 3}
 --- !u!1 &1978829444
 GameObject:
   m_ObjectHideFlags: 0
